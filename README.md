@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Digital Heroes: Golf Charity Subscription Platform
 
-## Getting Started
+A full-stack web application built for the Digital Heroes Trainee Selection Process. [cite_start]This platform combines golf performance tracking, a monthly algorithmic prize draw, and automated charitable giving[cite: 7].
 
-First, run the development server:
+**Live Demo:** [https://golf-app-taupe.vercel.app/]
 
-```bash
+---
+
+## 🚀 Project Overview
+
+This application was engineered to meet the strict requirements of the Digital Heroes Product Requirements Document (PRD). [cite_start]The platform shifts away from traditional sports aesthetics to deliver a premium, emotion-driven experience focused on real-world charitable impact[cite: 120].
+
+### Key Features & PRD Compliance:
+
+- [cite_start]**Subscription Paywall:** Users must hold an active monthly or yearly premium subscription to log scores and enter the draw[cite: 41].
+- [cite_start]**Rolling Score Engine:** Users log Stableford scores (1-45)[cite: 45]. [cite_start]The database automatically trims user histories to retain only the most recent 5 scores[cite: 48, 49].
+- [cite_start]**Algorithmic Draw Engine:** The Admin Command Center features a custom draw simulation that can generate random numbers or run an algorithmic draw weighted by the most frequently logged scores across the platform [cite: 57-59].
+- [cite_start]**Automated Prize Pools:** Automatically calculates the 40/35/25 prize pool splits based on active subscriber counts and rolls over the jackpot if no 5-number match is found [cite: 70-73].
+- [cite_start]**Winner Verification Workflow:** A complete system utilizing Supabase Storage for users to upload screenshot proofs of their scores, which administrators can review and mark as "Paid"[cite: 85].
+- [cite_start]**Premium UI/UX:** Built with a dark-mode, glassmorphic design system and enhanced with Framer Motion for subtle, modern interactions that avoid traditional golf clichés[cite: 120, 121].
+
+---
+
+## 💻 Tech Stack
+
+- **Frontend:** Next.js (App Router), React, Tailwind CSS
+- **Animations:** Framer Motion
+- **Backend & Database:** Supabase (PostgreSQL, Auth, Storage)
+- **Payments:** Stripe (Simulated for MVP testing)
+- **Deployment:** Vercel
+
+---
+
+## 🛠️ Local Setup & Installation
+
+To run this project locally, you will need Node.js and a Supabase account.
+
+**1. Clone the repository**
+\`\`\`bash
+git clone https://github.com/KKumarPro/golf-charity-platform.git
+cd golf-charity-platform
+\`\`\`
+
+**2. Install dependencies**
+\`\`\`bash
+npm install
+\`\`\`
+
+**3. Configure Environment Variables**
+Create a \`.env.local\` file in the root directory and add your Supabase keys:
+\`\`\`env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+\`\`\`
+
+**4. Run the development server**
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
+Navigate to \`http://localhost:3000\` to view the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Testing Credentials
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To explore the Admin Command Center and verify the verification/draw logic, please use the following credentials:
 
-## Learn More
+- **Admin Email:** `admin@digitalheroes.com`
+- **Password:** '123456789'
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Architected and Developed by Karan Kumar._
